@@ -16,10 +16,10 @@ import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 
 # Eigene Module
-from utils.data_utils import get_klines
-from utils.indicator_utils import calculate_indicators
-from models.prediction_model import predict_future_direction
-from utils.messaging_utils import send_telegram
+from crypto_warnsystem.utils.data_utils import get_klines
+from crypto_warnsystem.utils.indicator_utils import calculate_indicators
+from crypto_warnsystem.models.prediction_model import predict_future_direction
+from crypto_warnsystem.utils.messaging_utils import send_telegram
 
 # === Logging konfigurieren ===
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

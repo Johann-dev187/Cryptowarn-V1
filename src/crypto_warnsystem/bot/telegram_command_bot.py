@@ -11,9 +11,9 @@ import time
 import logging
 import requests
 from dotenv import load_dotenv
-from models.prediction_model import predict_future_direction
-from utils.data_utils import get_klines
-from utils.messaging_utils import send_message
+from crypto_warnsystem.models.prediction_model import predict_future_direction
+from crypto_warnsystem.utils.data_utils import get_klines
+from crypto_warnsystem.utils.messaging_utils import send_message
 import telebot
 
 # === Projektpfad einbinden ===

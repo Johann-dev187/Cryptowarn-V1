@@ -12,8 +12,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 import joblib
 import os
-from utils.data_utils import get_klines
-from utils.indicator_utils import calculate_indicators
+from crypto_warnsystem.utils.data_utils import get_klines
+from crypto_warnsystem.utils.indicator_utils import calculate_indicators
 
 MODEL_DIR = "model"
 MODEL_PATH = os.path.join(MODEL_DIR, "trained_model.pkl")

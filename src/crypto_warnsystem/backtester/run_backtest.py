@@ -11,8 +11,8 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from utils.data_utils import get_klines
-from utils.indicator_utils import calculate_indicators
+from crypto_warnsystem.utils.data_utils import get_klines
+from crypto_warnsystem.utils.indicator_utils import calculate_indicators
 
 def detect_liquidity_levels(df, window=10):
     highs = df['high'].rolling(window, center=True).max()
