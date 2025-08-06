@@ -28,3 +28,8 @@ jobs:
         continue-on-error: true
         run: |
           python -c "import src.crypto_warnsystem.utils.data_utils; print('✅ OK')"
+          
+      - name: Run pytest
+        run: |
+          pip install pytest
+          pytest --maxfail=1 --disable-warnings -q
