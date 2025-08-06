@@ -1,14 +1,14 @@
 [flake8]
-# Maximum line length (erhöhen wir auf 120)
+# Maximale Zeilenlänge erhöhen, um die E501-Fehler zu vermeiden
 max-line-length = 120
 
-# Regeln, die wir bis auf Weiteres ignorieren
+# Aktuelle Style-Fehler ignorieren
 extend-ignore =
-    E402,  # module level import not at top of file
-    F401,  # imported but unused
-    E302,  # expected 2 blank lines
-    E305,  # expected 2 blank lines after class or function
-    W293,  # blank line contains whitespace
-    W391,  # blank line at end of file
-    E501,  # line too long
-    E116   # unexpected indentation
+    E402,
+    F401,
+    E302,
+    E305,
+    W293,
+    W391,
+    E501,
+    E116
