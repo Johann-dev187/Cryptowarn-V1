@@ -30,4 +30,19 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["sma200"] = close.rolling(window=200).mean()
 
     return df
+import pandas as pd
+
+def calculate_liquidity_levels(df: pd.DataFrame, window: int = 20) -> pd.Series:
+    """
+    Berechnet den gleitenden Durchschnitt des Handelsvolumens als Liquidity-Level.
+
+    :param df: DataFrame mit einer Spalte 'volume'
+    :param window: Fenstergröße für den Moving Average
+    :return: pandas.Series mit Liquidity-Levels
+    """
+    if 'volume' not in df:
+        raise ValueError("DataFrame muss eine 'volume'-Spalte enthalten")
+    # Rolling mean auf dem Volumen
+    levels = df['volume'].rolling(window=window).mean()
+    return levels
 
