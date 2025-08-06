@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  smoke-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,12 +24,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Lint with flake8
-        run: |
-          pip install flake8
-          # Lint und immer Exit-Code 0 zurückgeben
-          flake8 src/crypto_warnsystem --exit-zero
-
       - name: Smoke test imports
         run: |
-          python -c "import src.crypto_warnsystem.utils.data_utils; print('OK')"
+          python -c "import src.crypto_warnsystem.utils.data_utils; print('✅ OK')"
